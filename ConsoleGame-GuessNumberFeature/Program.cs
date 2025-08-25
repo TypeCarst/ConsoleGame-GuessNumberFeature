@@ -103,8 +103,11 @@ void CheckNumbersOfClass(string argument)
     }
 
     int[] count = GetNumbersOfClass(classNumber);
-    Console.WriteLine("There are "+ count.Length +" numbers in the class \'" + argument + "\'." +
-                      "\nThe numbers are: " + string.Join(", ", count));
+    Console.WriteLine("There are " + count.Length + " numbers in the class \'" + argument + "\'.");
+    if (count.Length > 0)
+    {
+        Console.WriteLine("These numbers are: " + string.Join(", ", count) + ".");
+    }
 }
 
 int[] GetNumbersOfClass(int numberClass)
